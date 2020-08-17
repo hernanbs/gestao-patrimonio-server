@@ -13,6 +13,7 @@
 * Execute o projeto utilizando [Eclipse](https://www.eclipse.org/downloads/packages/release/2020-06/r/eclipse-ide-enterprise-java-developers).
 * Utilize servidor web [TomCat 7](https://tomcat.apache.org/download-70.cgi) para execução.
 * Instale banco de dados [PostgreSQL](https://www.postgresql.org/download/)
+* Para consumo da api é preciso executar [Repositório da Aplicação Web](https://github.com/hernanbs/gestao-patrimonio-client)
 
 ### HTTP Endpoints
 
