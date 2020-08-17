@@ -29,39 +29,59 @@
  * Não necessita de body na requisição
  * Retorno no formato: 
   ```json
-    [
-      {
-        "id": "conteudo",
-        "nome": "conteudo" 
-      }
-    ]
+  [
+    {
+      "id": "conteudo",
+      "nome": "conteudo" 
+    }
+  ]
   ```
 #### 02 - Pesquisar uma marca usando seu Id
 * Necessário adicionar id na url da requisição
 * Não necessita de body na requisição
 * Retorno no formato:
   ```json
-      {
-        "id": "conteudo",
-        "nome": "conteudo" 
-      }
+  {
+    "id": "conteudo",
+    "nome": "conteudo" 
+  }
   ```
 #### 03 - Pesquisar patrimônios usando o Id de sua marca
 * Necessário adicionar id na url da requisição
 * Não necessita de body na requisição
 * Retorno no formato:
   ```json
-    [
-      {
-        "id": "conteudo",
-        "nome": "conteudo" 
-      }
-    ]
+  [
+    {
+      "id": 1,
+      "idMarca": 1,
+      "nome": "conteudo",
+      "descricao": "conteudo",
+      "numTombo": 1000000
+    }
+  ]
   ```
 #### 04 - Adiciona uma marca a base de dados
+  * body da requisição necessário
+  ```json
+  {
+    "nome": "conteudo" 
+  }
+  ```
+  * Retorno no formato *inteiro*
 #### 05 - Editar uma marca existente da base de dados
+  * Necessário adicionar id na url da requisição
+  * body da requisição necessário
+  ```json
+  {
+    "nome": "conteudo" 
+  }
+  ```
+  * retorno sem conteudo
 #### 06 - Remover uma marca da base de dados
-
+* Necessário adicionar id na url da requisição
+* Não necessita de body na requisição
+* retorno sem conteudo
 ### :hammer_and_wrench: STATUS DAS RESPOSTAS
 * 200: OK
 * 201: Criado
