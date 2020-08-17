@@ -1,5 +1,4 @@
 <h1 align="center">API REST Gestão de Patrimônio</h1>
-API REST feita usando java.
 <p align="center">
 <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/hernanbs/gestao-patrimonio-server?style=flat-square" />
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/hernanbs/gestao-patrimonio-server?color=%232ec73a&style=flat-square" />
@@ -27,6 +26,41 @@ API REST feita usando java.
 | 06 | DELETE      | http://localhost:8080/projeto-gestao-patrimonio/rest/marcas/{id}             |
 
 #### 01 - Listar todas as marcas
+ * Não necessita de body na requisição
+ * Retorno no formato: 
+  ```json
+    [
+      {
+        "id": "conteudo",
+        "nome": "conteudo" 
+      }
+    ]
+  ```
+#### 02 - Pesquisar uma marca usando seu Id
+* Necessário adicionar id na url da requisição
+* Não necessita de body na requisição
+* Retorno no formato:
+  ```json
+      {
+        "id": "conteudo",
+        "nome": "conteudo" 
+      }
+  ```
+#### 03 - Pesquisar patrimônios usando o Id de sua marca
+* Necessário adicionar id na url da requisição
+* Não necessita de body na requisição
+* Retorno no formato:
+  ```json
+    [
+      {
+        "id": "conteudo",
+        "nome": "conteudo" 
+      }
+    ]
+  ```
+#### 04 - Adiciona uma marca a base de dados
+#### 05 - Editar uma marca existente da base de dados
+#### 06 - Remover uma marca da base de dados
 
 ### :hammer_and_wrench: STATUS DAS RESPOSTAS
 * 200: OK
