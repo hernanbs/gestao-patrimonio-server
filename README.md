@@ -16,6 +16,8 @@
 
 ### HTTP Endpoints
 
+#### Marca
+
 |    | Verbos HTTP | URI                                                                          |
 |----|:-----------:|------------------------------------------------------------------------------|
 | 01 | GET         | http://localhost:8080/projeto-gestao-patrimonio/rest/marcas                  |
@@ -68,7 +70,7 @@
     "nome": "conteudo" 
   }
   ```
-  * Retorno no formato *inteiro*
+  * Retorno no formato *inteiro*, numero de id
 #### 05 - Editar uma marca existente da base de dados
   * Necessário adicionar id na url da requisição
   * body da requisição necessário
@@ -82,6 +84,70 @@
 * Necessário adicionar id na url da requisição
 * Não necessita de body na requisição
 * retorno sem conteudo
+
+#### Patrimônio
+
+|    | Verbos HTTP | URI                                                                       |
+|----|:-----------:|---------------------------------------------------------------------------|
+| 01 | GET         | http://localhost:8080/projeto-gestao-patrimonio/rest/patrimonios          |
+| 02 | GET         | http://localhost:8080/projeto-gestao-patrimonio/rest/patrimonios/{id}     |
+| 03 | POST        | http://localhost:8080/projeto-gestao-patrimonio/rest/patrimonios          |
+| 04 | PUT         | http://localhost:8080/projeto-gestao-patrimonio/rest/patrimonios/{id}     |
+| 05 | DELETE      | http://localhost:8080/projeto-gestao-patrimonio/rest/patrimonios/{id}     |
+
+#### 01 - Listar todos os patrimônios
+ * Não necessita de body na requisição
+ * Retorno no formato: 
+  ```json
+  [
+    {
+      "id": 1,
+      "idMarca": 1,
+      "nome": "conteudo",
+      "descricao": "conteudo",
+      "numTombo": 1000000
+    }
+  ]
+  ```
+#### 02 - Pesquisar um patrimônio usando seu Id
+* Necessário adicionar id na url da requisição
+* Não necessita de body na requisição
+* Retorno no formato:
+  ```json
+  {
+    "id": 1,
+    "idMarca": 1,
+    "nome": "conteudo",
+    "descricao": "conteudo",
+    "numTombo": 1000000
+  }
+  ```
+#### 03 - Adiciona um patrimônio a base de dados
+  * body da requisição necessário
+  ```json
+  {
+    "idMarca": 1,
+    "nome": "conteudo",
+    "descricao": "conteudo",
+  }
+  ```
+  * Retorno no formato *inteiro*, número do id
+ #### 05 - Editar um patrimônio existente da base de dados
+  * Necessário adicionar id na url da requisição
+  * body da requisição necessário
+  ```json
+  {
+    "idMarca": 1,
+    "nome": "conteudo",
+    "descricao": "conteudo",
+  }
+  ```
+  * retorno sem conteudo
+#### 06 - Remover um patrimônio da base de dados
+* Necessário adicionar id na url da requisição
+* Não necessita de body na requisição
+* retorno sem conteudo
+
 ### :hammer_and_wrench: STATUS DAS RESPOSTAS
 * 200: OK
 * 201: Criado
