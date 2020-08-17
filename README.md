@@ -16,7 +16,7 @@
 
 ### HTTP Endpoints
 
-#### Marca
+#### :pushpin: Marca
 
 |    | Verbos HTTP | URI                                                                          |
 |----|:-----------:|------------------------------------------------------------------------------|
@@ -85,7 +85,7 @@
 * Não necessita de body na requisição
 * retorno sem conteudo
 
-#### Patrimônio
+#### :pushpin: Patrimônio
 
 |    | Verbos HTTP | URI                                                                       |
 |----|:-----------:|---------------------------------------------------------------------------|
