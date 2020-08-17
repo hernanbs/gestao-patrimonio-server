@@ -30,7 +30,6 @@ public class PatrimonioService {
 	
 	
 	@GET
-	@Path("/list")
 	@Produces(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	public List<Patrimonio> listPatrimonio() {
 		List<Patrimonio> lista = null;
@@ -43,7 +42,6 @@ public class PatrimonioService {
 	}
 	
 	@POST
-	@Path("/add")
 	@Consumes(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	@Produces(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	public String addPatrimonio(Patrimonio patrimonio) {
@@ -63,7 +61,7 @@ public class PatrimonioService {
 	
 	
 	@GET
-	@Path("/get/{id}")
+	@Path("/{id}")
 	@Consumes(MediaType.TEXT_PLAIN)
 	@Produces(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	public Patrimonio findById(@PathParam("id") int idPatrimonio) {
@@ -79,7 +77,7 @@ public class PatrimonioService {
 	
 	
 	@PUT
-	@Path("/edit/{id}")
+	@Path("/{id}")
 	@Consumes(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	@Produces(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	public String updatePatrimonio(Patrimonio patrimonio, @PathParam("id") int idPatrimonio) {
@@ -99,7 +97,7 @@ public class PatrimonioService {
 	
 
 	@DELETE
-	@Path("/delete/{id}")
+	@Path("/{id}")
 	@Consumes(MediaType.TEXT_PLAIN)
 	@Produces(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	public String deletePatrimonio(@PathParam("id") int idPatrimonio) {

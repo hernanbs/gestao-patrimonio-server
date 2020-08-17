@@ -87,7 +87,6 @@ public class PatrimonioDAO {
 	}
 	
 	public void updatePatrimonio(Patrimonio patrimonio, int idPatrimonio) throws Exception {
-		System.out.println(" dao ==" + patrimonio.getDescricao()+" "+ patrimonio.getIdMarca()+ " "+ patrimonio.getNome());
 		Connection conexao = ConnectionFactory.openConnection();
 
 		String sql = "UPDATE TB_PATRIMONIO SET PATRIMONIO_MARCA_ID = ?,"

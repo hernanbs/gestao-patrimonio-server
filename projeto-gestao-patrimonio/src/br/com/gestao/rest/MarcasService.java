@@ -33,7 +33,6 @@ public class MarcasService {
 	
 	
 	@GET
-	@Path("/list")
 	@Produces(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	public List<Marca> listMarcas() {
 		List<Marca> lista = null;
@@ -46,7 +45,6 @@ public class MarcasService {
 	}
 	
 	@POST
-	@Path("/add")
 	@Consumes(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	@Produces(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	public String addMarca(Marca marca) throws Exception {
@@ -67,7 +65,7 @@ public class MarcasService {
 	
 	
 	@GET
-	@Path("/get/{id}")
+	@Path("/{id}")
 	@Consumes(MediaType.TEXT_PLAIN)
 	@Produces(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	public Marca findById(@PathParam("id") int idMarca) {
@@ -83,7 +81,7 @@ public class MarcasService {
 	
 	
 	@PUT
-	@Path("/edit/{id}")
+	@Path("/{id}")
 	@Consumes(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	@Produces(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	public String updateMarca(Marca marca, @PathParam("id") int idMarca) {
@@ -102,7 +100,7 @@ public class MarcasService {
 	
 
 	@DELETE
-	@Path("/delete/{id}")
+	@Path("/{id}")
 	@Consumes(MediaType.TEXT_PLAIN)
 	@Produces(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	public String deleteMarca(@PathParam("id") int idMarca) {
